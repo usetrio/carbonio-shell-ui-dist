@@ -35,11 +35,11 @@ preinst() {
 
 package() {
   cd "${srcdir}"
-  mkdir -p "${pkgdir}/opt/zextras/web/iris/${pkgname}/3427ceb3116605cee189699986293b7d6ddb8dde"
-  cp -a  ../dist/* "${pkgdir}/opt/zextras/web/iris/${pkgname}/3427ceb3116605cee189699986293b7d6ddb8dde" || true
-  chown root:root -R "${pkgdir}/opt/zextras/web/iris/${pkgname}/3427ceb3116605cee189699986293b7d6ddb8dde"
-  chmod 644 -R "${pkgdir}/opt/zextras/web/iris/${pkgname}/3427ceb3116605cee189699986293b7d6ddb8dde"
-  find "${pkgdir}/opt/zextras/web/iris/${pkgname}/3427ceb3116605cee189699986293b7d6ddb8dde" -type d -exec chmod a+x "{}" \;
+  mkdir -p "${pkgdir}/opt/zextras/web/iris/${pkgname}/bf4cd0a881836a36fe0c4df29fc576e24ffe9534"
+  cp -a  ../dist/* "${pkgdir}/opt/zextras/web/iris/${pkgname}/bf4cd0a881836a36fe0c4df29fc576e24ffe9534" || true
+  chown root:root -R "${pkgdir}/opt/zextras/web/iris/${pkgname}/bf4cd0a881836a36fe0c4df29fc576e24ffe9534"
+  chmod 644 -R "${pkgdir}/opt/zextras/web/iris/${pkgname}/bf4cd0a881836a36fe0c4df29fc576e24ffe9534"
+  find "${pkgdir}/opt/zextras/web/iris/${pkgname}/bf4cd0a881836a36fe0c4df29fc576e24ffe9534" -type d -exec chmod a+x "{}" \;
 }
 
 postinst() {
@@ -47,7 +47,7 @@ postinst() {
   mkdir -p "/opt/zextras/web/iris/${pkgname}/current"
 
   # not every package has a index.html
-  cd "/opt/zextras/web/iris/${pkgname}/3427ceb3116605cee189699986293b7d6ddb8dde"
+  cd "/opt/zextras/web/iris/${pkgname}/bf4cd0a881836a36fe0c4df29fc576e24ffe9534"
   find . -name "*.html" -exec cp --parents "{}" /opt/zextras/web/iris/${pkgname}/current/ \;
 
   # re-generate the component list, for every component
