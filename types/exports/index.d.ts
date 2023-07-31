@@ -79,9 +79,9 @@ declare const useActionFactory: <T>(
 	type: string,
 	id: string
 ) => [ActionFactory<T> | undefined, boolean];
-declare const getAppViews: () => any;
-declare const useApp: () => CarbonioModule;
+// declare const useApp: () => CarbonioModule;
 declare const getApp: () => CarbonioModule;
+declare const getAppViews: <T>() => T;
 declare const useAppContext: <T>() => T;
 declare const getAppContext: <T>() => T;
 declare const useUserAccount: () => Account;
